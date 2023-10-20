@@ -1,0 +1,8 @@
+services:
+  backend:
+    image: bwg-backend-coding-1
+    build:
+      dockerfile: templates/Dockerfile
+      context: .
+    env_file:
+      - .env.docker
