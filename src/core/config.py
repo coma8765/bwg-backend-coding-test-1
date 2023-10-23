@@ -1,3 +1,9 @@
+"""Application environment configuration provider
+
+Copy `.env.example` to `.env` for pure usa
+or to `.env.docker` for docker-based use.
+Or setup environment variables use system methods.
+"""
 import logging
 from dataclasses import dataclass
 from functools import lru_cache
@@ -22,3 +28,6 @@ def get_config() -> Config:
         telegram_api_token=env.str("TELEGRAM_API_TOKEN"),
         telegram_chat_id=env.int("TELEGRAM_CHAT_ID"),
     )
+
+
+__all__ = ["get_config", "Config"]

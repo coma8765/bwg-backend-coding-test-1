@@ -1,3 +1,4 @@
+"""Models for the messenger provider"""
 from dataclasses import dataclass
 
 

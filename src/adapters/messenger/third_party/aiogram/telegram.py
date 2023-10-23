@@ -9,8 +9,8 @@ from src.adapters.messenger.models import (
     MessageSource,
     PhotoMessageSource,
 )
-from src.adapters.messenger.third_party.aiogram.config import AiogramConfig
-from src.adapters.messenger.third_party.aiogram.models import (
+from src.adapters.messenger.third_party.aiogram import (
+    AiogramConfig,
     TelegramMessage,
     from_telegram_message,
 )

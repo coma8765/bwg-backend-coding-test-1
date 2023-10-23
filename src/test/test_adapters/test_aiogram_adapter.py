@@ -1,3 +1,4 @@
+"""Tests for Telegram adapter"""
 from datetime import datetime
 from unittest import IsolatedAsyncioTestCase
 from unittest.mock import AsyncMock, patch
@@ -5,11 +6,12 @@ from unittest.mock import AsyncMock, patch
 from aiogram import Bot, types
 
 from src.adapters.messenger.models import MessageSource
-from src.adapters.messenger.third_party.aiogram.config import AiogramConfig
-from src.adapters.messenger.third_party.aiogram.telegram import Aiogram
+from src.adapters.messenger.third_party.aiogram import Aiogram, AiogramConfig
 
 
 class TestAiogram(IsolatedAsyncioTestCase):
+    """Test cases for aiogram Telegram adapter"""
+
     instance: Aiogram
 
     @classmethod
@@ -52,4 +54,4 @@ class TestAiogram(IsolatedAsyncioTestCase):
             test_message_source.text,
         )
 
-    # TODO(improve): Add other tests
+    # TODO: @coma8765 Add other tests

@@ -1,4 +1,4 @@
-"""Main use case implementation"""
+"""Main use-case implementation"""
 import json
 from logging import Logger
 
@@ -12,7 +12,10 @@ from src.core.logging import get_logger
 
 
 class App:
-    """Main application case"""
+    """The main use-case of the application
+
+    This use-case using `locales.json` for multi-language support.
+    """
 
     __slots__ = ("_logger", "_messenger", "locales", "_chat_id")
 
@@ -80,3 +83,6 @@ class App:
                     photo=message.photos[0],
                 )
             )
+
+
+__all__ = ["App"]

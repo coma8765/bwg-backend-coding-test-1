@@ -1,3 +1,4 @@
+"""Abstractions for Messenger"""
 from abc import ABC, abstractmethod
 from typing import Callable, Coroutine, Never
 
@@ -9,6 +10,8 @@ from src.adapters.messenger.models import (
 
 
 class Messenger(ABC):
+    """Abstract class for Messenger Provider"""
+
     __slots__ = ()
 
     @abstractmethod
